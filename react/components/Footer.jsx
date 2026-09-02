@@ -1,48 +1,52 @@
 import React from 'react'
 
-const Footer = () => {
+const Navbar = () => {
     return (
         <>
-            <footer className="bg-dark text-white pt-5 pb-4">
-                <div className="container text-center text-md-start">
-                    <div className="row text-center text-md-start">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div className="container-fluid">
+                    <a className="navbar-brand d-flex align-items-center" href="#">
+                        <img src="https://static.vecteezy.com/system/resources/previews/007/255/473/non_2x/flower-icon-and-symbol-with-black-background-free-vector.jpg" alt="Logo" width="40" height="40" className="rounded-circle d-inline-block align-text-top me-2 object-fit-cover" />
+                        <span>FloraStore</span>
+                    </a>
 
-                        <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                            <h5 className="text-uppercase mb-4 font-weight-bold text-warning">Company Name</h5>
-                            <p>Here you can use rows and columns to organize your footer content.</p>
-                        </div>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
 
-                        <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                            <h5 className="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
-                            <p><a href="#" className="text-white text-decoration-none">Bootstrap</a></p>
-                            <p><a href="#" className="text-white text-decoration-none">Design</a></p>
-                        </div>
+                    <div className="collapse navbar-collapse" id="mainNavbar">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li className="nav-item">
+                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Flowers</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">About Us</a>
+                            </li>
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categories
+                                </a>
+                                <ul className="dropdown-menu" aria-labelledby="servicesDropdown">
+                                    <li><a className="dropdown-item" href="#">Roses</a></li>
+                                    <li><a className="dropdown-item" href="#">Tulips</a></li>
+                                    <li><hr className="dropdown-divider" /></li>
+                                    <li><a className="dropdown-item" href="#">Exotic Bouquets</a></li>
+                                </ul>
+                            </li>
+                        </ul>
 
-                        <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                            <h5 className="text-uppercase mb-4 font-weight-bold text-warning">Useful Links</h5>
-                            <p><a href="#" className="text-white text-decoration-none">Your Account</a></p>
-                            <p><a href="#" className="text-white text-decoration-none">Help</a></p>
-                        </div>
-
-                        <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                            <h5 className="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
-                            <p><i className="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                            <p><i className="fas fa-envelope mr-3"></i> info@example.com</p>
-                        </div>
-                    </div>
-
-                    <hr className="mb-4" />
-
-                    <div className="row align-items-center">
-                        <div className="col-md-7 col-lg-8">
-                            <p>© 2026 Copyright: <a href="#" className="text-warning text-decoration-none"><strong>Company.com</strong></a></p>
-                        </div>
+                        <form className="d-flex" role="search">
+                            <input className="form-control me-2" type="search" placeholder="Search flowers..." aria-label="Search" />
+                            <button className="btn btn-outline-light" type="submit">Search</button>
+                        </form>
                     </div>
                 </div>
-            </footer>
-
+            </nav>
         </>
     )
 }
 
-export default Footer
+export default Navbar
