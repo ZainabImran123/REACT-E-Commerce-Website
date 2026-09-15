@@ -3,8 +3,14 @@ import React from 'react'
 const Card = (props) => {
     return (
         <div className="col">
-            <div className="card h-100">
-                <img src={props.image} className="card-img-top" alt="..." />
+            {/* Added hover-shadow here */}
+            <div className="card h-100 hover-shadow">
+
+                {/* Wrapped the image in card-img-wrapper */}
+                <div className="card-img-wrapper">
+                    <img src={props.image} className="card-img-top" alt="..." />
+                </div>
+
                 <div className="card-body">
                     <h5 className="card-title">{props.title}</h5>
                     <p className="card-text">{props.description}</p>
@@ -15,10 +21,6 @@ const Card = (props) => {
             </div>
         </div>
     )
-
 }
 
 export default Card
-
-
-

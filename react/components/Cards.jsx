@@ -78,4 +78,4 @@ const Cards = () => {
 
 }
 
-export default Cards
+export default Cardscards.jsx
